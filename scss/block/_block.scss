@@ -1,0 +1,188 @@
+@import "./mixin";
+
+*{
+  box-sizing: border-box;
+}
+body {
+  background-color: aqua;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+}
+.container {
+  background-color: #fff;
+  width: 400px;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(83, 83, 255);
+  p {
+    margin-left: 20px;
+    font-weight: 800;
+    font-size: 16;
+    color: #fff;
+  }
+  button {
+    width: 15px;
+    height: 15px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+  }
+}
+
+
+
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  div {
+    display: block;
+  }
+  .lines {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.3;
+    p {
+      font-size: small;
+    }
+    hr {
+      width: 110px;
+    }
+  }
+}
+.your-msg1 {
+  width: 220px;
+  position: relative;
+  right: -15px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: rgb(136, 148, 255);
+  &::before {
+    content: " ";
+    @include triangle-up(5px, rgb(136, 148, 255));
+    position: absolute;
+    left: -7px;
+    top: 3px;
+    transform: rotate(-90deg);
+  }
+  p {
+    font-size: small;
+  }
+}
+.your-msg2 {
+  width: 150px;
+  position: relative;
+  right: -15px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: rgb(136, 148, 255);
+  &::before {
+    content: " ";
+    @include triangle-up(5px, rgb(136, 148, 255));
+    position: absolute;
+    left: -7px;
+    top: 3px;
+    transform: rotate(-90deg);
+  }
+}
+.my-msg1 {
+  width: 218px;
+  padding-left: 8px;
+  padding-right: 8px;
+  position: relative;
+  left: 168px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: bisque;
+  &::after {
+    content: " ";
+    @include triangle-up(5px, bisque);
+    position: absolute;
+    left: 215px;
+    top: 3px;
+    transform: rotate(90deg);
+  }
+}
+.my-msg2 {
+  width: 200px;
+  padding-left: 8px;
+  padding-right: 8px;
+  position: relative;
+  left: 180px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: bisque;
+  &::after {
+    content: " ";
+    @include triangle-up(5px, bisque);
+    position: absolute;
+    left: 197px;
+    top: 3px;
+    transform: rotate(90deg);
+  }
+}
+.clock1 {
+  margin: 0;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  color: rgba(0, 0, 0, 0.295);
+  font-size: small;
+  position: relative;
+  left: 20px;
+}
+.clock2 {
+  margin: 0;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  color: rgba(0, 0, 0, 0.295);
+  font-size: small;
+  position: relative;
+  left: 342px;
+}
+.footer {
+
+  hr {
+    width: 350px;
+    opacity: 0.5;
+    margin-bottom: 20px;
+  }
+  form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    input {
+      margin-left: 30px;
+      border: none;
+    }
+  }
+  button {
+    margin-right: 30px;
+    border: none;
+    background-color: transparent;
+    p {
+      margin: 0;
+      color: aqua;
+      font-weight: 700;
+      font-size: 16;
+    }
+  }
+}
